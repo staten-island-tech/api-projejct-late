@@ -1,0 +1,21 @@
+.h3{
+display: flex;
+justify-content: end;
+flex-wrap: wrap;
+width: 300px;
+}
+.pe{
+display: flex;
+justify-content: end;
+flex-wrap: wrap;
+width: 50px;
+}
+
+.peen{
+    display: flex;
+    justify-content:flex-start; /* allocateas extra space inbetween or around our elements */ 
+    flex-wrap: wrap; /* wraps next card to new line when space is gone */
+    align-items: center;
+    width: 95vw;
+    margin: 50px auto; /* centers element */
+}
