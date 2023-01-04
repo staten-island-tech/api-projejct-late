@@ -5,6 +5,3 @@ data = requests.get("https://api.open-meteo.com/v1/forecast?latitude=52.52&longi
 
 
 data2=data['hourly']
-print(data2)
-for i in data2['time']:
-    print(i)

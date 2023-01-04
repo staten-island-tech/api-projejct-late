@@ -13,8 +13,12 @@
   </head>
   <body>
     <div class="peen">
-    <h3 class="h3">{{data.time}}</h3>
-    <h3 class="pe">{{data.temperature_2m}}</h3>
+      {% for date in data.time %}
+    <h3 class="card">{{date}}</h3>
+    {% endfor %}
+    {% for temp in data.temperature_2m %}
+    <h3 class="card">{{temp}}</h3>
+    {% endfor %}
     </div>
   </body>
 </html>
