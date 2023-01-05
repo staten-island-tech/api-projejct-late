@@ -1,8 +1,6 @@
 import os
 
 from flask import Flask, render_template
-from .API import *
-
 
 
 def create_app(test_config=None):
@@ -27,8 +25,8 @@ def create_app(test_config=None):
         pass
 
     # a simple page that says hello
-    @app.route("/")
-    def index():
-        return render_template('index.html', data=data2)
+    @app.route('/')
+    def home():
+        return render_template('index.html')
 
     return app

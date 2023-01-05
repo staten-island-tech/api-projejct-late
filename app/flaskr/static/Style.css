@@ -1,0 +1,76 @@
+.center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-card{
+    color:#f3f5f0;
+    justify-content: center;
+}
+#main-title{
+    color:white;
+    justify-content: center;
+    font-style:normal;
+    font-size: 50px;
+}
+.title-back{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    color:#f3f5f0;
+    width: 500px; 
+    border-radius: 10px;
+    justify-content: center;
+    align-self: center;
+    display:flex;
+  }
+.flex-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 95vw;
+    margin: 50px auto;
+    margin-bottom: 100px;
+}
+body{
+    background-image: url('https://wallpapercave.com/dwp2x/4QyIoZO.jpg');
+    background-size: cover;
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
+.center{
+    align-items: center;
+}
+.main-back{
+    color:#f3f5f0
+}
+.reg-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    color:#f3f5f0;
+    width: 500px; 
+    border-radius: 10px;
+}
+#c-color{
+    color:#f3f5f0;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+    padding: 2px 16px;
+}
+.bg{
+    background-color: #f3f5f0;
+    width: 500px;
+    border-radius: 10px;
+}
+.title{
+    text-align: center;
+    color:black;
+}
+.card-desc{
+    text-align: center;
+    color:black;
+}
