@@ -1,7 +1,7 @@
 import requests
 import json
 
-data = requests.get("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m").json()
+data = requests.get("https://api.spoonacular.com/recipes/complexSearch?yogurt=pasta&apiKey=8f76aac47cef4f23874744431bd6424a").json()
 
 
-data2=data['hourly']
+print(data)
