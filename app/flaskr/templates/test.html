@@ -6,9 +6,12 @@
     <title>Document</title>
   </head>
   <body>
-    {% for pp in data.products %}
+    <div>
+      {% for pp in data.results %}
     <h1>{{pp.title}}</h1>
-    <img src="{{pp.image}}">
+    <h3>{{pp.id}}</h3>
+    <img width="10%" src='{{pp.image}}'>
     {% endfor %}
+    </div>
   </body>
 </html>
