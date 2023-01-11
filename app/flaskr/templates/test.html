@@ -6,9 +6,9 @@
     <title>Document</title>
   </head>
   <body>
-    {% for pee in data.products %}
-    <h1>{{pee.title}}</h1>
+    {% for pp in data.products %}
+    <h1>{{pp.title}}</h1>
+    <img src="{{pp.image}}">
     {% endfor %}
-
   </body>
 </html>
