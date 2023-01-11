@@ -1,7 +1,6 @@
-from flask import Flask, render_template, request
 import os
-import requests
-import json
+
+from flask import Flask, render_template
 
 
 def create_app(test_config=None):
@@ -25,20 +24,9 @@ def create_app(test_config=None):
     except OSError:
         pass
 
+    # a simple page that says hello
+    @app.route('/')
+    def home():
+        return render_template('index.html')
 
-    
-    """ @app.route("/")
-    def index():
-        return render_template('index.html') """
-
-    @app.route('/', methods=('GET', 'POST'))
-    def getPost():
-        if request.method == 'POST':
-            title = request.form['title']
-            body = request.form['body']
-            data = requests.get(f"https://api.spoonacular.com/food/products/search?query={title}&number=100&apiKey=8f76aac47cef4f23874744431bd6424a").json()
-            print(request.headers)
-            return render_template('test.html',data=data)
-        else:
-            return render_template('index.html')
     return app
