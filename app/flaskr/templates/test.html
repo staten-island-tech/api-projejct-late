@@ -3,14 +3,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pp2</title>
+    <link rel="stylesheet" href="../static/style.css">
   </head>
   <body>
-    <div>
+    <div class='flex-container'>
       {% for pp in data.results %}
-    <h1>{{pp.title}}</h1>
-    <h3>{{pp.id}}</h3>
-    <img width="10%" src='{{pp.image}}'>
+    <div class="card">
+    <h2>{{pp.title}}</h1>
+    <img class="img" width="45%" src='{{pp.image}}'>
+    </div>
     {% endfor %}
     </div>
   </body>

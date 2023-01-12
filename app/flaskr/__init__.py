@@ -35,7 +35,7 @@ def create_app(test_config=None):
     def getPost():
         if request.method == 'POST':
             title = request.form['title']
-            data = requests.get(f"https://api.spoonacular.com/recipes/complexSearch?query={title}&number=50&apiKey=8f76aac47cef4f23874744431bd6424a").json()
+            data = requests.get(f"https://api.spoonacular.com/recipes/complexSearch?query={title}&number=100&apiKey=8f76aac47cef4f23874744431bd6424a").json()
             print(request.headers)
             return render_template('test.html',data=data)
         else:
