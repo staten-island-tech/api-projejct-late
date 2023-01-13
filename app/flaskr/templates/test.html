@@ -9,10 +9,12 @@
   <body>
     <div class='flex-container'>
       {% for pp in data.results %}
+      <a class="card" href="/recipeinfo/{{pp.id}}"></a>
     <div class="card">
     <h2>{{pp.title}}</h1>
     <img class="img" width="45%" src='{{pp.image}}'>
     </div>
+  </a>
     {% endfor %}
     </div>
   </body>
