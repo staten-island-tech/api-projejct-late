@@ -25,12 +25,6 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-
-    
-    """ @app.route("/")
-    def index():
-        return render_template('index.html') """
-
     @app.route('/', methods=('GET', 'POST'))
     def getPost():
         if request.method == 'POST':
@@ -41,10 +35,13 @@ def create_app(test_config=None):
         else:
             return render_template('index.html')
     
-    @app.route('/recipeinfo/<id>')
-    def getID(id):
-        title=request.form['title']
-        data = requests.get(f"https://api.spoonacular.com/recipes/complexSearch?query={title}&number=100&apiKey=8f76aac47cef4f23874744431bd6424a").json()
-        for thingy in data['results']:
-            return thingy
+    @app.route('/recipeinfo/<id>', methods=('GET', 'POST'))
+    def getID():
+        if request.method == 'GET':
+            title=request.form['title']
+            data = requests.get(f"https://api.spoonacular.com/recipes/complexSearch?query={title}&number=100&apiKey=8f76aac47cef4f23874744431bd6424a").json()
+            for i in data['results']:
+                return i
+        else:
+            return 'poopie'
     return app
