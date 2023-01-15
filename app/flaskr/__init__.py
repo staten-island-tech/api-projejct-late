@@ -43,5 +43,8 @@ def create_app(test_config=None):
             for i in data['results']:
                 return i
         else:
-            return 'poopie'
+            title=request.form['title']
+            data = requests.get(f"https://api.spoonacular.com/recipes/complexSearch?query={title}&number=100&apiKey=8f76aac47cef4f23874744431bd6424a").json()
+            for i in data['results']:
+                return i
     return app
