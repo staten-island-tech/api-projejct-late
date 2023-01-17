@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Results</title>
+    <title>Pp</title>
     <link rel="stylesheet" href="../static/css/style.css">
   </head>
   <body>
@@ -21,14 +21,6 @@
         />
         <input type="submit" value="Save" />
       </form>
-    </div>
-    <div class='flex-container'>
-      {% for pp in data.results %}
-      <a class="card" href="/recipeinfo/{{pp.id}}">
-    <h2>{{pp.title}}</h1>
-    <img class="img" width="45%" src='{{pp.image}}'>
-  </a>
-    {% endfor %}
     </div>
   </body>
 </html>

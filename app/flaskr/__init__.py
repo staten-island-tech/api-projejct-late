@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request
 import os
 import requests
 import json
+
+from flask import Flask, render_template, request
 
 
 def create_app(test_config=None):
@@ -40,11 +41,11 @@ def create_app(test_config=None):
         if request.method == 'GET':
             title=request.form['title']
             data = requests.get(f"https://api.spoonacular.com/recipes/complexSearch?query={title}&number=100&apiKey=8f76aac47cef4f23874744431bd6424a").json()
-            def getID(id):
+            def getId(id):
                 for i in data['results']:
                     e = i['id']
                     if id==e:
-                        return id
+                        return render_template('info.html', id=i)
         else:
             return 'no'
     return app
