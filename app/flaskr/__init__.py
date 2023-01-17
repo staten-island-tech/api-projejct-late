@@ -36,16 +36,8 @@ def create_app(test_config=None):
         else:
             return render_template('index.html')
     
-    @app.route('/recipeinfo/<id>', methods=('GET', 'POST'))
-    def getGet():
-        if request.method == 'GET':
-            title=request.form['title']
-            data = requests.get(f"https://api.spoonacular.com/recipes/complexSearch?query={title}&number=100&apiKey=8f76aac47cef4f23874744431bd6424a").json()
-            def getId(id):
-                for i in data['results']:
-                    e = i['id']
-                    if id==e:
-                        return render_template('info.html', id=i)
-        else:
-            return 'no'
+    @app.route('/recipeinfo/<id>')
+    def getId(id):
+        data = requests.get(f'https://api.spoonacular.com/recipes/{id}/information?includeNutrition=false&apiKey=8f76aac47cef4f23874744431bd6424a').json()
+        return data
     return app
