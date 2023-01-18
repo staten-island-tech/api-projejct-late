@@ -32,12 +32,17 @@ def create_app(test_config=None):
             title = request.form['title']
             data = requests.get(f"https://api.spoonacular.com/recipes/complexSearch?query={title}&number=100&apiKey=8f76aac47cef4f23874744431bd6424a").json()
             print(request.headers)
-            return render_template('test.html',data=data)
+            if len(data['results']) == 0:
+                return render_template('noresults.html')
+            else:
+                return render_template('search.html',data=data, search=title)
         else:
-            return render_template('index.html')
+            random = requests.get('https://api.spoonacular.com/recipes/random?number=1&apiKey=8f76aac47cef4f23874744431bd6424a').json()
+            return render_template('index.html', random=random)
     
     @app.route('/recipeinfo/<id>')
     def getId(id):
         data = requests.get(f'https://api.spoonacular.com/recipes/{id}/information?includeNutrition=false&apiKey=8f76aac47cef4f23874744431bd6424a').json()
-        return data
+        return render_template('info.html', data=data)
+    
     return app
