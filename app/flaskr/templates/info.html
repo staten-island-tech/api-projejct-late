@@ -20,8 +20,17 @@
         <input type="button" class="button1" value="Back" onclick='history.back()'>
       </form>
     </div>
-    <h3>{{data.title}}</h3>
-    <img src="{{data.image}}">
+    <h1 class="title1">{{data.title}}</h3>
+      <div class="flex-container"> 
+    <img class="curvy" src="{{data.image}}">
+    <div>
+    {% for ingredients in data.extendedIngredients %}
+    <h3>{{ingredients.original}}</h3>
+    {% endfor %}
+    </div>
+  </div>
+    <h3>{{data.instructions}}</h3>
     <h1>{{data.message}}</h1>
+    
   </body>
 </html>

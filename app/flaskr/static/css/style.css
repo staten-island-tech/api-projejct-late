@@ -168,18 +168,23 @@ body{
 }
 
 .title1{
-    color: white;
+    color: #D3D3D3;
     display:flex;
     justify-content: center;
 }
 
 .desc1{
-    color:white;
+    color:#D3D3D3;
     display: flex;
     justify-content: center;
 }
 
 .desc2{
-    color:white;
+    color:#D3D3D3;
     display: flex;
+}
+
+.curvy{
+    margin-left: 50px;
+    border-radius: 25px;
 }
