@@ -1,6 +1,8 @@
 import os
+import requests
+import json
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 
 def create_app(test_config=None):
@@ -24,9 +26,26 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # a simple page that says hello
-    @app.route('/')
-    def home():
-        return render_template('index.html')
-
+    @app.route('/', methods=('GET', 'POST'))
+    def getPost():
+        if request.method == 'POST':
+            title = request.form['title']
+            data = requests.get(f"https://api.spoonacular.com/recipes/complexSearch?query={title}&number=100&apiKey=8f76aac47cef4f23874744431bd6424a").json()
+            print(request.headers)
+            return render_template('test.html',data=data)
+        else:
+            return render_template('index.html')
+    
+    @app.route('/recipeinfo/<id>', methods=('GET', 'POST'))
+    def getGet():
+        if request.method == 'GET':
+            title=request.form['title']
+            data = requests.get(f"https://api.spoonacular.com/recipes/complexSearch?query={title}&number=100&apiKey=8f76aac47cef4f23874744431bd6424a").json()
+            def getId(id):
+                for i in data['results']:
+                    e = i['id']
+                    if id==e:
+                        return render_template('info.html', id=i)
+        else:
+            return 'no'
     return app
