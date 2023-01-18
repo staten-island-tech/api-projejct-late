@@ -157,8 +157,29 @@ body{
     background-color: #f3f5f0;
     display: flex;
     justify-content: center;
+    text-decoration: none;
+    color: black;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .random:hover{
     background-color: #E4E3E3;
+}
+
+.title1{
+    color: white;
+    display:flex;
+    justify-content: center;
+}
+
+.desc1{
+    color:white;
+    display: flex;
+    justify-content: center;
+}
+
+.desc2{
+    color:white;
+    display: flex;
 }
