@@ -8,7 +8,11 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
+<<<<<<< Updated upstream
 set VIRTUAL_ENV=C:\Users\natha\OneDrive\Documents\SITHS repository\SITHS Repository\New folder\api-projejct-late\app
+=======
+set VIRTUAL_ENV=C:\Users\Zeya.li\Documents\GitHub\api-projejct-late\app
+>>>>>>> Stashed changes
 
 if not defined PROMPT set PROMPT=$P$G
 
