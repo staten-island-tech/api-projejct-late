@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon" type="images/x-icon" href="../static/imgs/funnylogo.png" />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/" class="a">
+        <img class="moai" width=90%" src="../static/imgs/funnylogo.png">
+      </a>
+      <a>
+        <h1>Random Recipe</h1>
+      </a>
+        <form method="post">
+        <label for="title">Search</label>
+        <input class="input"
+          name="title"
+          id="title"
+          value="{{ request.form['title'] }}"
+          required
+        />
+        <input type="submit" value="Save" />
+      </form>
+    </div>
+    <h1 class="center1">Search results for {{search}}</h1>
+    <div class='flex-container'>
+      {% for pp in data.results %}
+      <a class="card" href="/recipeinfo/{{pp.id}}">
+    <h2 class="card-desc">{{pp.title}}</h1>
+    <img class="img" width="55%" src='{{pp.image}}'>
+  </a>
+    {% endfor %}
+    </div>
+  </body>
+</html>
