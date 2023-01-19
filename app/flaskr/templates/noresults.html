@@ -3,36 +3,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Poorly Made Recipe Site</title>
+    <title>Pp</title>
     <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="icon" type="images/x-icon" href="../static/imgs/funnylogo.png" />
   </head>
   <body>
     <div class="navbar">
-     
-     <a href="/" class="a">
-        <img class="moai" width=90%" src="../static/imgs/funnylogo.png">
+      <a href="/">
+        <img width="15%" src="../static/imgs/funnylogo.png">
       </a>
-      {% for id in random.recipes %}
-      <a class="random" href="/recipeinfo/{{id.id}}">
-        <h2>Random Recipe</h2>
-      </a>
-      {% endfor %}
-      <div class="margined">
-        <form method="post">
-        <label style="font-size: larger;" for="title">Search</label>
-        <input class="input"
-          name="title"
-          id="title"
-          value="{{ request.form['title'] }}"
-          required
-        />
-        <input class="button1" type="submit" value="Save" />
-      </form>
-      </div>
     </div>
-    <h1 class="title1">No Results</h1>
-    <div class="flex-container">
-      <img src="../static/imgs/HAHA.png">
-    </div>
-    </body>
+    <h1>HAHA</h1>
+  </body>
+</html>
