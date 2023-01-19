@@ -145,7 +145,21 @@ body{
     margin-left: 0px
 }
 
+.button2{
+    background-color: aliceblue;
+    border-radius: 5px;
+    width: 50px;
+    height: 35px;
+    margin-right: 25px;
+    transition: all 0.2s;
+    margin-left: 1350px
+}
+
 .button1:hover{
+    background-color: darkgrey;
+}
+
+.button2:hover{
     background-color: darkgrey;
 }
 
@@ -157,8 +171,39 @@ body{
     background-color: #f3f5f0;
     display: flex;
     justify-content: center;
+    text-decoration: none;
+    color: black;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .random:hover{
     background-color: #E4E3E3;
 }
+
+.title1{
+    color: #D3D3D3;
+    display:flex;
+    justify-content: center;
+}
+
+.desc1{
+    color:#D3D3D3;
+    display: flex;
+    justify-content: center;
+}
+
+.desc2{
+    color:#D3D3D3;
+    
+}
+
+.curvy{
+    margin-left: 50px;
+    border-radius: 25px;
+}
+
+.margined{
+    margin-left: 1150px;
+}
+
